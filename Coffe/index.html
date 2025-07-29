@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>شروع روز با قهوه</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #1e1a17;
+        background-image: url("coffee.jpg");
+        background-size: contain;
+        background-position: center;
+        color: #f5e3c0;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid #a67c52;
+      }
+
+      h1 {
+        font-size: 2.8em;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      button {
+        padding: 12px 24px;
+        font-size: 1em;
+        border: 1px solid #a67c52;
+        background-color: transparent;
+        color: #f5e3c0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #a67c52;
+        color: #1e1a17;
+      }
+
+      .nav {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        color: #f5e3c0;
+        font-size: 0.9em;
+      }
+
+      .nav span {
+        cursor: pointer;
+      }
+
+      .nav span:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <span>خانه</span>
+      <span>درباره ما</span>
+      <span>بلاگ</span>
+      <span>تماس</span>
+      <span onclick="startAssistant()">ورود</span>
+    </div>
+
+    <div class="container">
+      <h1>روزت رو با قهوه شروع کن ☕</h1>
+      <button onclick="startAssistant()">ثبت سفارش</button>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+      function startAssistant() {
+        // صدا زدن فایل اصلی JS
+        if (typeof start === "function") {
+          start();
+        }
+      }
+    </script>
+  </body>
+</html>
